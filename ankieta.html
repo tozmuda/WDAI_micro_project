@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/icon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <title>OwocowyBlog</title>
+</head>
+<body>
+    
+    <header>
+        <b>OwocowyBlog</b>
+    </header>
+    <section class="flex-container">
+        <nav>
+            <ul>
+                <a href="index.html">
+                    <li>
+                        Strona główna
+                    </li>
+                </a>
+                <a href="info.html">
+                    <li>
+                        Informacje
+                    </li>
+                </a>
+                <a href="zarty.html">
+                    <li>
+                        Żarty
+                    </li>
+                </a>
+                <a href="ankieta.html">
+                    <li class="nav-active">
+                        Ankieta
+                    </li>
+                </a>
+            </ul>
+        </nav>
+        <article>
+            <div id="form">
+                <p>Zdecydowałeś już jaki jest twój ulubiony owoc?</p>
+                <label class="radio">
+                    <input type="radio" name="fruit-selection" id="radio1">
+                    Kiwi
+                </label><br>
+                
+                <label class="radio">
+                    <input type="radio" name="fruit-selection" id="radio2">
+                    Mango
+                </label><br>
+
+                <label class="radio">
+                    <input type="radio" name="fruit-selection" id="radio3">
+                    Ananas
+                </label><br>
+
+                <label class="radio">
+                    <input type="radio" name="fruit-selection" id="radio4">
+                    Grejpfrut
+                </label><br>
+
+                <button class="submit-button" onclick="verifyForm()">Oddaj głos</button>
+            </div>
+
+            <p id="notShow">
+                Dziękuję za wypełnienie ankiety!!! Twój wybór to 
+                <b id="formDone"></b>
+            </p>
+        </article>
+        <script>
+            function formDone(){
+                document.getElementById("notShow").style.opacity = 1;
+                document.getElementById("form").style.opacity = 0;
+                document.getElementById("form").style.height = 0;
+            }
+            function verifyForm(){
+                if(document.getElementById("radio1").checked){
+                    formDone();
+                    document.getElementById("formDone").innerHTML = "Kiwi"
+                }
+                else if(document.getElementById("radio2").checked){
+                    formDone();
+                    document.getElementById("formDone").innerHTML = "Mango"
+                }
+                else if(document.getElementById("radio3").checked){
+                    formDone();
+                    document.getElementById("formDone").innerHTML = "Ananas"
+                }
+                else if(document.getElementById("radio4").checked){
+                    formDone();
+                    document.getElementById("formDone").innerHTML = "Grejpfrut"
+                }
+                else{
+                    alert("Najpierw wybierz owoc!")
+                }
+            }
+        </script>
+    </section>
+    <footer>
+        Strona zrobiona przez studenta który chciałby dobrą ocenę z projektu &copy;<br>
+        Zrobione wyłącznie przy pomocy HTML, CSS (bez bootstrap) oraz Javascript
+    </footer>
+</body>
+</html>

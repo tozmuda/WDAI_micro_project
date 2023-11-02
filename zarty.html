@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/icon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <title>OwocowyBlog</title>
+</head>
+<body>
+    
+    <header>
+        <b>OwocowyBlog</b>
+    </header>
+    <section class="flex-container">
+        <nav>
+            <ul>
+                <a href="index.html">
+                    <li>
+                        Strona główna
+                    </li>
+                </a>
+                <a href="info.html">
+                    <li>
+                        Informacje
+                    </li>
+                </a>
+                <a href="zarty.html">
+                    <li class="nav-active">
+                        Żarty
+                    </li>
+                </a>
+                <a href="ankieta.html">
+                    <li>
+                        Ankieta
+                    </li>
+                </a>
+            </ul>
+        </nav>
+        <article>
+            <script>
+                function showText(num){
+                    document.querySelector("#pun".concat('', num.toString())).style.opacity = 1;
+                    document.querySelector("#pun".concat('', num.toString())).style.height = 'fit-content';
+
+                    document.querySelector("#button".concat('', num.toString())).style.opacity = 0.6;
+                    document.querySelector("#button".concat('', num.toString()).concat('', ":hover")).style.backgroundColor = 'rgb(191, 255, 0)';
+                    document.querySelector("#button".concat('', num.toString()).concat('', ":hover")).style.cursor = 'default';
+                }
+            </script>
+
+            <h1>Żart o kiwi</h1>
+            <div class="jokes-section">
+                <p>Dlaczego kiwi tak świetnie gra w piłkę nożną?</p>
+                <button onclick="showText(1)" id="button1">Dlaczego?</button>
+                <p id="pun1" class="pun">Bo zawsze "wykiwi" wszystkich przeciwników!</p>
+            </div>
+            <div class="divider"></div>
+            <h1>Żart o mango</h1>
+            <div class="jokes-section">
+                <p>Dlaczego mango nie kupiło warzyw w supermarkecie?</p>
+                <button onclick="showText(2)" id="button2">Dlaczego?</button>
+                <p id="pun2" class="pun">Bo już miało pełno witamin!</p>
+            </div>
+            <div class="divider"></div>
+            <h1>Żart o ananasie</h1>
+            <div class="jokes-section">
+                <p>Dlaczego ananas był zawsze takim dobrym przyjacielem?</p>
+                <button onclick="showText(3)" id="button3">Dlaczego?</button>
+                <p id="pun3" class="pun">Bo był zawsze słodki, niezależnie od sytuacji!</p>
+            </div>
+            <div class="divider"></div>
+            <h1>Żart o grejpfrucie</h1>
+            <div class="jokes-section">
+                <p>Dlaczego grejpfrut źle się czuł na przyjęciu?</p>
+                <button onclick="showText(4)" id="button4">Dlaczego?</button>
+                <p id="pun4" class="pun">Bo myślał, że jest trochę za "kwasowy" do tego towarzystwa!</p>
+            </div>
+            <div class="divider"></div>
+        </article>
+    </section>
+    <footer>
+        Strona zrobiona przez studenta który chciałby dobrą ocenę z projektu &copy;<br>
+        Zrobione wyłącznie przy pomocy HTML, CSS (bez bootstrap) oraz Javascript
+    </footer>
+</body>
+</html>

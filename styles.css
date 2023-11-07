@@ -4,7 +4,7 @@
 
 body{
     margin: 0;
-    overflow: hidden;
+    overflow: auto;
 }
 
 header{
@@ -79,7 +79,7 @@ nav a{
 }
 
 footer{
-    width: 100%;
+    width: 94%;
     background-color: rgb(211, 255, 212);
     font-size: 1.3vw;
     padding: 2%;
